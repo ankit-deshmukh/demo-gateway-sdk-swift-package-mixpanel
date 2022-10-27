@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/mixpanel/mixpanel-swift", .exact("3.3.0"))
+        .package(name: "Mixpanel", url: "https://github.com/mixpanel/mixpanel-swift", .exact("3.3.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -24,8 +24,8 @@ let package = Package(
         .target(
             name: "SCGatewayWrapper",
             dependencies: [
-                Target.Dependency
-                .target(name: "SCGateway", condition: .when(platforms: .some([.iOS])))
+                .target(name: "SCGateway", condition: .when(platforms: .some([.iOS]))),
+                .product(name: "Mixpanel", package: "Mixpanel")
             ]
         ),
         .binaryTarget(name: "SCGateway",
