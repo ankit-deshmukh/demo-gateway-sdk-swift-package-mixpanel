@@ -29,7 +29,7 @@ let package = Package(
             ]
         ),
         .binaryTarget(name: "SCGateway",
-                      url: "https://gateway.smallcase.com/scgateway_mixpanel/1.0.5/SCGateway.xcframework.zip",
-                      checksum: "f3be31146874c9c9b5518102dc3fd38b7a126aa84bb3b3dd5b96c3dfd50da9aa"),
+                      url: "https://gateway.smallcase.com/scgateway_mixpanel/1.0.6/SCGateway.xcframework.zip",
+                      checksum: "1ebaa99195f32bdd8cbfa91f1824f84281e9db1514c40bdcceafa8113009984c"),
     ]
 )
